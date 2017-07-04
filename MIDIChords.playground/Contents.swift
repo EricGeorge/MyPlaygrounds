@@ -28,9 +28,10 @@ let chords = ["major":[majorTriad, minorTriad, minorTriad, majorTriad, majorTria
               "minor":[minorTriad, diminishedTriad, majorTriad, minorTriad, minorTriad, majorTriad, majorTriad]]
 
 // TODO:  Add UI to change key and mode
-let key = keys["C"]             // C Major for testing
-let mode = modes["major"]       // C Major for testing
-let chordSet = chords["major"]  // C Major for testing
+
+// C Major for testing
+let scale = "major"
+let key = keys["C"]
 
 let midi = AKMIDI()
 
@@ -41,6 +42,9 @@ class PlaygroundMIDIReceiver: AKMIDIListener {
     func receivedMIDINoteOn(noteNumber: MIDINoteNumber,
                             velocity: MIDIVelocity,
                             channel: MIDIChannel){
+        
+        let mode = modes[scale]
+        let chordSet = chords[scale]
         
         // first quantize the note to the key
         let normalizedNote = (Int(noteNumber) - key!) % 12
