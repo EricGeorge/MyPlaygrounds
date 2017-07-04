@@ -27,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		07A338291F0B45BD001330A1 /* MIDIChords.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MIDIChords.playground; sourceTree = "<group>"; };
 		07C367B41F0309DF00F6FCE3 /* MyPlaygrounds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyPlaygrounds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C367B71F0309DF00F6FCE3 /* MyPlaygrounds.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyPlaygrounds.h; sourceTree = "<group>"; };
 		07C367B81F0309DF00F6FCE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +51,7 @@
 		07C367AA1F0309DF00F6FCE3 = {
 			isa = PBXGroup;
 			children = (
+				07A338291F0B45BD001330A1 /* MIDIChords.playground */,
 				07C367C31F030A9300F6FCE3 /* MIDIScaleQuantize.playground */,
 				07C367B61F0309DF00F6FCE3 /* MyPlaygrounds */,
 				07C367B51F0309DF00F6FCE3 /* Products */,
