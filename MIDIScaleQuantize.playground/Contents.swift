@@ -4,8 +4,25 @@
 import MyPlaygrounds
 import AudioKit
 
-let majorScale = [0, 2, 4, 5, 7, 9, 11]
-let key = 7 // G Major for testing
+let keys = ["C" : 0,
+            "Db": 1,
+            "D" : 2,
+            "Eb": 3,
+            "E" : 4,
+            "F" : 5,
+            "Gb": 6,
+            "G" : 7,
+            "Ab": 8,
+            "A" : 9,
+            "Bb": 10,
+            "B" : 11]
+
+let modes = ["major": [0, 2, 4, 5, 7, 9, 11],
+             "minor": [0, 2, 3, 5, 7, 8, 10]]
+
+// TODO:  Add UI to change key and mode
+let key = keys["G"]         // G Minor for testing
+let mode = modes["minor"]   // G Minor for testing
 
 let midi = AKMIDI()
 
@@ -17,19 +34,19 @@ class PlaygroundMIDIReceiver: AKMIDIListener {
                             velocity: MIDIVelocity,
                             channel: MIDIChannel){
       
-        let normalizedNote = (Int(noteNumber) - key) % 12
-        let octave = (Int(noteNumber) - key) / 12
+        let normalizedNote = (Int(noteNumber) - key!) % 12
+        let octave = (Int(noteNumber) - key!) / 12
         var inScaleNote:Int?
 
-        for number in majorScale {
+        for number in mode! {
             if number <= normalizedNote {
                 inScaleNote = number
             }
         }
 
-        let newNote = octave * 12 + inScaleNote! + key
+        let newNote = octave * 12 + inScaleNote! + key!
         
-        AKLog("noteOn: \(noteNumber) newNote: \(newNote)")
+        AKLog("noteIn: \(noteNumber) noteOut: \(newNote)")
     }
     
     // override to suppress the default logging
