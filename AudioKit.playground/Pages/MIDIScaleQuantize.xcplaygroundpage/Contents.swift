@@ -33,17 +33,17 @@ class PlaygroundMIDIReceiver: AKMIDIListener {
     func receivedMIDINoteOn(noteNumber: MIDINoteNumber,
                             velocity: MIDIVelocity,
                             channel: MIDIChannel){
-      
+        
         let normalizedNote = (Int(noteNumber) - key!) % 12
         let octave = (Int(noteNumber) - key!) / 12
         var inScaleNote:Int?
-
+        
         for number in mode! {
             if number <= normalizedNote {
                 inScaleNote = number
             }
         }
-
+        
         let newNote = octave * 12 + inScaleNote! + key!
         
         AKLog("noteIn: \(noteNumber) noteOut: \(newNote)")
@@ -53,20 +53,20 @@ class PlaygroundMIDIReceiver: AKMIDIListener {
     func receivedMIDINoteOff(noteNumber: MIDINoteNumber,
                              velocity: MIDIVelocity,
                              channel: MIDIChannel) {
-//        AKLog("channel: \(channel) noteOff: \(noteNumber) velocity: \(velocity)")
+        //        AKLog("channel: \(channel) noteOff: \(noteNumber) velocity: \(velocity)")
     }
     
     func receivedMIDIAftertouch(noteNumber: MIDINoteNumber,
                                 pressure: MIDIByte,
                                 channel: MIDIChannel) {
-//        AKLog("channel: \(channel) MIDI Aftertouch Note: \(noteNumber) pressure: \(pressure)")
+        //        AKLog("channel: \(channel) MIDI Aftertouch Note: \(noteNumber) pressure: \(pressure)")
     }
     
     func receivedMIDIAfterTouch(_ pressure: MIDIByte,
                                 channel: MIDIChannel) {
-//        AKLog("channel: \(channel) MIDI AfterTouch pressure: \(pressure)")
+        //        AKLog("channel: \(channel) MIDI AfterTouch pressure: \(pressure)")
     }
-
+    
 }
 
 let receiver = PlaygroundMIDIReceiver()
@@ -75,4 +75,5 @@ midi.addListener(receiver)
 
 import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
+
 

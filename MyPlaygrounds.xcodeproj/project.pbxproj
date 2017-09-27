@@ -26,11 +26,10 @@
 
 /* Begin PBXFileReference section */
 		0758C5751F7C543F00DD470C /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = "../../_Libraries/AudioKit-macOS/AudioKit.framework"; sourceTree = "<group>"; };
-		07A338291F0B45BD001330A1 /* MIDIChords.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MIDIChords.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		07A338291F0B45BD001330A1 /* AudioKit.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AudioKit.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		07C367B41F0309DF00F6FCE3 /* MyPlaygrounds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyPlaygrounds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C367B71F0309DF00F6FCE3 /* MyPlaygrounds.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyPlaygrounds.h; sourceTree = "<group>"; };
 		07C367B81F0309DF00F6FCE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07C367C31F030A9300F6FCE3 /* MIDIScaleQuantize.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MIDIScaleQuantize.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		07C367CB1F031B3F00F6FCE3 /* MyPlaygrounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlaygrounds.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,8 +56,7 @@
 		07C367AA1F0309DF00F6FCE3 = {
 			isa = PBXGroup;
 			children = (
-				07A338291F0B45BD001330A1 /* MIDIChords.playground */,
-				07C367C31F030A9300F6FCE3 /* MIDIScaleQuantize.playground */,
+				07A338291F0B45BD001330A1 /* AudioKit.playground */,
 				07C367B61F0309DF00F6FCE3 /* MyPlaygrounds */,
 				07C367B51F0309DF00F6FCE3 /* Products */,
 				0758C5741F7C543F00DD470C /* Frameworks */,
