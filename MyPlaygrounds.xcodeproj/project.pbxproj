@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0758C5731F7C538800DD470C /* AudioKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0758C5721F7C538800DD470C /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0758C5761F7C543F00DD470C /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0758C5751F7C543F00DD470C /* AudioKit.framework */; };
 		07C367B91F0309DF00F6FCE3 /* MyPlaygrounds.h in Headers */ = {isa = PBXBuildFile; fileRef = 07C367B71F0309DF00F6FCE3 /* MyPlaygrounds.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07C367CC1F031B3F00F6FCE3 /* MyPlaygrounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C367CB1F031B3F00F6FCE3 /* MyPlaygrounds.swift */; };
@@ -20,14 +19,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0758C5731F7C538800DD470C /* AudioKit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0758C5721F7C538800DD470C /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
 		0758C5751F7C543F00DD470C /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = "../../_Libraries/AudioKit-macOS/AudioKit.framework"; sourceTree = "<group>"; };
 		07A338291F0B45BD001330A1 /* MIDIChords.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MIDIChords.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		07C367B41F0309DF00F6FCE3 /* MyPlaygrounds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyPlaygrounds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,7 +57,6 @@
 		07C367AA1F0309DF00F6FCE3 = {
 			isa = PBXGroup;
 			children = (
-				0758C5721F7C538800DD470C /* AudioKit.framework */,
 				07A338291F0B45BD001330A1 /* MIDIChords.playground */,
 				07C367C31F030A9300F6FCE3 /* MIDIScaleQuantize.playground */,
 				07C367B61F0309DF00F6FCE3 /* MyPlaygrounds */,
