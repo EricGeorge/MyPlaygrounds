@@ -1,7 +1,12 @@
-//: [Previous](@previous)
+//: MIDIPorts
 
-import Foundation
 
-var str = "Hello, playground"
+import MyPlaygrounds
+import AudioKit
 
-//: [Next](@next)
+let midi = AKMIDI()
+
+midi.inputNames
+midi.destinationNames
+
+
