@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0758C5761F7C543F00DD470C /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0758C5751F7C543F00DD470C /* AudioKit.framework */; };
 		07C367B91F0309DF00F6FCE3 /* MyPlaygrounds.h in Headers */ = {isa = PBXBuildFile; fileRef = 07C367B71F0309DF00F6FCE3 /* MyPlaygrounds.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07C367CC1F031B3F00F6FCE3 /* MyPlaygrounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C367CB1F031B3F00F6FCE3 /* MyPlaygrounds.swift */; };
+		07D25E261FB7C608004BB455 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D25E251FB7C608004BB455 /* AudioKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,12 +25,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0758C5751F7C543F00DD470C /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = "../../_Libraries/AudioKit-macOS/AudioKit.framework"; sourceTree = "<group>"; };
 		07A338291F0B45BD001330A1 /* AudioKit.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AudioKit.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		07C367B41F0309DF00F6FCE3 /* MyPlaygrounds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyPlaygrounds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C367B71F0309DF00F6FCE3 /* MyPlaygrounds.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyPlaygrounds.h; sourceTree = "<group>"; };
 		07C367B81F0309DF00F6FCE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07C367CB1F031B3F00F6FCE3 /* MyPlaygrounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlaygrounds.swift; sourceTree = "<group>"; };
+		07D25E251FB7C608004BB455 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = "../../_Libraries/AudioKit-macOS/AudioKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0758C5761F7C543F00DD470C /* AudioKit.framework in Frameworks */,
+				07D25E261FB7C608004BB455 /* AudioKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,7 +48,7 @@
 		0758C5741F7C543F00DD470C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0758C5751F7C543F00DD470C /* AudioKit.framework */,
+				07D25E251FB7C608004BB455 /* AudioKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -293,6 +293,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/MyPlaygrounds",
+					"../../_Libraries/AudioKit-macOS/.",
 				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = MyPlaygrounds/Info.plist;
@@ -321,6 +322,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/MyPlaygrounds",
+					"../../_Libraries/AudioKit-macOS/.",
 				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = MyPlaygrounds/Info.plist;
