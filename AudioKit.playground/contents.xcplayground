@@ -4,5 +4,6 @@
         <page name='MIDIChords'/>
         <page name='MIDIPorts'/>
         <page name='MIDIScaleQuantize'/>
+        <page name='MIDISampler'/>
     </pages>
 </playground>
