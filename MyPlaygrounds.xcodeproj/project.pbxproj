@@ -25,6 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		071573DE1FCE435B004CDF81 /* HarmonyKit.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = HarmonyKit.playground; sourceTree = "<group>"; };
 		07A338291F0B45BD001330A1 /* AudioKit.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AudioKit.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		07C367B41F0309DF00F6FCE3 /* MyPlaygrounds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyPlaygrounds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C367B71F0309DF00F6FCE3 /* MyPlaygrounds.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyPlaygrounds.h; sourceTree = "<group>"; };
@@ -57,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				07A338291F0B45BD001330A1 /* AudioKit.playground */,
+				071573DE1FCE435B004CDF81 /* HarmonyKit.playground */,
 				07C367B61F0309DF00F6FCE3 /* MyPlaygrounds */,
 				07C367B51F0309DF00F6FCE3 /* Products */,
 				0758C5741F7C543F00DD470C /* Frameworks */,
