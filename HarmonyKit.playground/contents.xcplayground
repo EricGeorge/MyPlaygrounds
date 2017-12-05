@@ -2,8 +2,8 @@
 <playground version='6.0' target-platform='macos'>
     <pages>
         <page name='Scales - Find Subarray'/>
-        <page name='Scales - Apply halfsteps'/>
         <page name='Keys'/>
         <page name='Diatonic triads'/>
+        <page name='Intervals'/>
     </pages>
 </playground>
