@@ -106,7 +106,11 @@ struct Note: CustomStringConvertible {
     }
     
     static func -(lhs: Note, rhs: Note) -> Interval {
-        return Interval(rawValue: abs(lhs.value - rhs.value))!
+        var lhs = lhs.value
+        if lhs < rhs.value {
+            lhs += 12
+        }
+        return Interval(rawValue: lhs - rhs.value)!
     }
     
     var description: String {
@@ -145,26 +149,34 @@ struct Scale {
         self.type = type
     }
     
-    var notes: [Note] {
-        return type.intervals.reduce([root]) {
-            (notes, interval) -> [Note] in
-            return notes + [Note((notes.last?.noteType)! + 1, .natural)]
-        }
-    }
+//    var notes: [Note] {
+//        return type.intervals.reduce([root]) {
+//            (notes, interval) -> [Note] in
+//            return notes + [Note((notes.last?.noteType)! + 1, .natural)]
+//        }
+//    }
     
-/*
-     let scale = [root]
-     for each interval in intervals {
-        let newNote = Note(scale.last.noteType + 1, .natural
-        let proposedInterval = newNote - root
-        let accidental = Accidental(proposedInterval - interval)
-        scale = scale + newNote
+
+    var notes: [Note] {
+        var scale = [root]
+        for interval in type.intervals {
+            var newNote = Note((scale.last?.noteType)! + 1, .natural)
+            print("New Note: \(newNote)")
+            let proposedInterval = newNote - root
+            print("Interval: \(interval)")
+            print("Proposed Interval: \(proposedInterval)")
+            let accidental = Accidental(rawValue: interval.rawValue - proposedInterval.rawValue)
+            print("Accidental: \(accidental)")
+            let finalNote = Note(newNote.noteType, accidental!)
+            scale = scale + [finalNote]
+        }
+        return scale
+    }
      
- */
-        
+    
 }
 
-let scale = Scale(Note(.F, .natural), ScaleType.major)
+let scale = Scale(Note(.F, .sharp), ScaleType.major)
 print(scale.notes)
 
 
