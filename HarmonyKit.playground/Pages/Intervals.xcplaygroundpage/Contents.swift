@@ -149,31 +149,17 @@ struct Scale {
         self.type = type
     }
     
-//    var notes: [Note] {
-//        return type.intervals.reduce([root]) {
-//            (notes, interval) -> [Note] in
-//            return notes + [Note((notes.last?.noteType)! + 1, .natural)]
-//        }
-//    }
-    
-
     var notes: [Note] {
         var scale = [root]
         for interval in type.intervals {
-            var newNote = Note((scale.last?.noteType)! + 1, .natural)
-            print("New Note: \(newNote)")
-            let proposedInterval = newNote - root
-            print("Interval: \(interval)")
-            print("Proposed Interval: \(proposedInterval)")
-            let accidental = Accidental(rawValue: interval.rawValue - proposedInterval.rawValue)
-            print("Accidental: \(accidental)")
-            let finalNote = Note(newNote.noteType, accidental!)
+            var scaleNote = Note((scale.last?.noteType)! + 1, .natural)
+            let scaleNoteInterval = scaleNote - root
+            let accidental = Accidental(rawValue: interval.halfsteps - scaleNoteInterval.halfsteps)
+            let finalNote = Note(scaleNote.noteType, accidental!)
             scale = scale + [finalNote]
         }
         return scale
     }
-     
-    
 }
 
 let scale = Scale(Note(.F, .sharp), ScaleType.major)
